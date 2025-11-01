@@ -1,57 +1,83 @@
-public class find_maximum_1{
-    public static void main(String[] args) {
+public class find_maximum_2_20251101
+{
+    public static void main(String[] args)
+    {
         int answer1 = find_max_num(new int[]{5,6,1,2,4});
         int answer2 = find_max_num(new int[]{530,55,5,55,5,5,4,353,43,234,234,234,23,42,6,1,2,4});
         int answer3 = find_max_num(new int[]{23,42,6,1,2,4});
         int answer4 = find_max_num(new int[]{23,3,6,1,2,4,42});
+        int answer5 = find_max_num(new int[]{});
+        
         System.out.println(answer1);
         System.out.println(answer2);
         System.out.println(answer3);
         System.out.println(answer4);
+        System.out.println(answer5);
     }
 
     public static int find_max_num(int[] arr)
     {
-        
-        int current_max_value = arr[0];
-        for(int i = 1; i < arr.length; i++)
+        for(int i=0;i<arr.length;i++)
         {
-            if(current_max_value < arr[i])
+            boolean is_max_value = true;
+            for(int j=i+1;j<arr.length;j++)
             {
-                current_max_value = arr[i];
+                if(arr[i]<arr[j])
+                {
+                    is_max_value = false;
+                    break;
+                }
+            }
+
+            if(is_max_value == true) // if(max_value)
+            {
+                return arr[i];
             }
         }
 
-        return current_max_value;
+        return 0;
     }
 }
 
 
 
-// public class find_maximum_1{
-//     public static void main(String[] args) {
+// public class find_maximum_2
+// {
+//     public static void main(String[] args)
+//     {
 //         int answer1 = find_max_num(new int[]{5,6,1,2,4});
 //         int answer2 = find_max_num(new int[]{530,55,5,55,5,5,4,353,43,234,234,234,23,42,6,1,2,4});
 //         int answer3 = find_max_num(new int[]{23,42,6,1,2,4});
 //         int answer4 = find_max_num(new int[]{23,3,6,1,2,4,42});
+//         int answer5 = find_max_num(new int[]{});
+        
 //         System.out.println(answer1);
 //         System.out.println(answer2);
 //         System.out.println(answer3);
 //         System.out.println(answer4);
+//         System.out.println(answer5);
 //     }
 
 //     public static int find_max_num(int[] arr)
 //     {
-        
-//         int current_max_value = arr[0];
 //         for(int num:arr)
 //         {
-//             if(current_max_value < arr)
+//             boolean is_max_value = true;
+//             for(int compareNumber:arr)
 //             {
-//                 current_max_value = arr;
+//                 if(num<compareNumber)
+//                 {
+//                     is_max_value = false;
+//                     break;
+//                 }
+//             }
+
+//             if(is_max_value == true) // if(max_value)
+//             {
+//                 return num;
 //             }
 //         }
 
-//         return current_max_value;
+//         return 0;
 //     }
-//}
+// }
