@@ -1,4 +1,4 @@
-public class find_maximum_2_20251101
+public class findMaximum_2_20251101
 {
     public static void main(String[] args)
     {

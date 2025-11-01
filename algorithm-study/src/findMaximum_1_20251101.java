@@ -1,4 +1,4 @@
-public class find_maximum_1_20251101{
+public class findMaximum_1_20251101{
     public static void main(String[] args) {
         int answer1 = find_max_num(new int[]{5,6,1,2,4});
         int answer2 = find_max_num(new int[]{530,55,5,55,5,5,4,353,43,234,234,234,23,42,6,1,2,4});
