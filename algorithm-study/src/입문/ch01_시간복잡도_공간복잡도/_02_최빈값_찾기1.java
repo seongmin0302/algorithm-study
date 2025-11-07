@@ -1,9 +1,10 @@
+package 입문.ch01_시간복잡도_공간복잡도;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 // The main method must be in a class named "Main".
-class findMode_1_20251101 {
+class _02_최빈값_찾기1 {
     public static void main(String[] args) {
         System.out.println("정답 = i, 현재 풀이 값 =" + find_max_occurred_alphabet("hello my name is dingcodingco"));
         System.out.println("정답 = e, 현재 풀이 값 =" + find_max_occurred_alphabet("we love algorithm"));

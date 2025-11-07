@@ -1,8 +1,9 @@
+package 입문.ch01_시간복잡도_공간복잡도;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FindNotRepeatingFirstCharacter_20251103 {
+public class _05_반복되지_않는_문자 {
     public static void main(String[] args) {
         System.out.println("정답 = d 현재 풀이 값 = " + findNotRepeatingFirstCharacter("abadabac"));
         System.out.println("정답 = c 현재 풀이 값 = " + findNotRepeatingFirstCharacter("aabbcddd"));
