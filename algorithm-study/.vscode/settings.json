@@ -2,7 +2,6 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "src",
-        "입문/ch01_시간복잡도_공간복잡도"
     ],
     "java.project.referencedLibraries": []
 }
