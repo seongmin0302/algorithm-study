@@ -1,12 +1,9 @@
 package 입문.ch02_어레이_링크드리스트_이진탐색재귀함수;
 
-public class _05_팩터리얼 {
+public class _05_팩토리얼 {
     public static void main(String[] args) {
-        int n=factorial(3);
-        System.out.println(n);
-
-        int n2=factorial(4);
-        System.out.println(n2);
+        System.out.println(factorial(3));
+        System.out.println(factorial(5));
 
     }
 
