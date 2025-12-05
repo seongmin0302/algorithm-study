@@ -13,22 +13,49 @@ public class _06_회문검사 {
     }
 
     public static boolean isPalindrome(String string) {
-
-        int length=string.length();
-        int lengthDivideBy2=string.length()/2;
-        for(int i=0;i<lengthDivideBy2;i++) {
-            if (string.charAt(i)!=string.charAt(length-1-i)) {
-                return false;
-            }
+        int legth=string.length();
+        if(legth<=1) { 
+            return true;
         }
-
-        return true;
-
-
+        
+        if (string.charAt(0)!=string.charAt(legth-1)) {
+            return false;
+        }
+        
+        return isPalindrome(string.substring(1, legth-1));
     }
 }
 
 
+// package 입문.ch02_어레이_링크드리스트_이진탐색재귀함수;
+
+// public class _06_회문검사 {
+//     public static void main(String[] args) {
+//         System.out.println(isPalindrome("abcba"));
+//         System.out.println(isPalindrome("summuus"));
+//         System.out.println(isPalindrome("xabba"));
+//         System.out.println(isPalindrome("comcom"));
+//         System.out.println(isPalindrome("comwwtmoc"));
+//         System.out.println(isPalindrome("comwwmoc"));
+//         System.out.println(isPalindrome("abcdedcba"));
+//         System.out.println(isPalindrome("abcddcba"));
+//     }
+
+//     public static boolean isPalindrome(String string) {
+
+//         int length=string.length();
+//         int lengthDivideBy2=string.length()/2;
+//         for(int i=0;i<lengthDivideBy2;i++) {
+//             if (!(string.charAt(i)==string.charAt(length-1-i))) {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+
+
+//     }
+// }
 
 
 
