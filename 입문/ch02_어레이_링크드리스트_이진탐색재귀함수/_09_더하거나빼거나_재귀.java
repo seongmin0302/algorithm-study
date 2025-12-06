@@ -23,6 +23,11 @@ public class _09_더하거나빼거나_재귀 {
         return count;
     }
 
+    // N의 길이의 배열에서 더하거나 뺀 모든 경우의 수는 
+    // N-1 의 길이의 배열에서 마지막 원소를 더하거나 뺀 경우의 수를 추가하면 된다!
+    // 중요: 즉, 하나씩 원소를 추가할 때마다 
+    // 새로 추가된 원소를 더하고 빼는 경우의 수를 추가하면 될것이다!
+
     // currentIndex: 현재 보고 있는 인덱스
     // currentSum: currentIndex 이전까지의 합
     public static void getAllWaysByDoingPlusOrMinus(int[] array,int currentIndex,int currentSum) {
