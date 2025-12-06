@@ -5,7 +5,7 @@ class LinkedListKthFromLast {
         int value;
         Node next;
 
-        Node(int value) {
+        public Node(int value) {
             this.value=value;
             this.next=null;
         }
@@ -13,12 +13,12 @@ class LinkedListKthFromLast {
 
     Node head;
 
-    LinkedListKthFromLast(int value) {
+    public LinkedListKthFromLast(int value) {
         this.head=new Node(value);
     }
 
     public void append(int value) {
-        Node cur=head;
+        Node cur=this.head;
         while (cur.next!=null) {
             cur=cur.next;
         }
@@ -27,7 +27,7 @@ class LinkedListKthFromLast {
 
     public int getNode(int index) {
         int curIndex=0;
-        Node cur=head;
+        Node cur=this.head;
         while(curIndex!=index) {
             cur=cur.next;
             curIndex++;
@@ -49,7 +49,7 @@ class LinkedListKthFromLast {
     }
 
     public void printAll() {
-        Node cur=head;
+        Node cur=this.head;
 
         while (cur!=null) {
             System.out.print(cur.value+"->");
