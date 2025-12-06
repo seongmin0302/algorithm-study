@@ -1,40 +1,20 @@
 package 입문.ch02_어레이_링크드리스트_이진탐색재귀함수;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class _08_배달의민족_배달가능여부 {
 
     public static boolean isAvailableToOrder(String[] menus, String[] orders) {
-        
-    for(String menu:orders) {
-        if(!isExistTargetMenuBinarySearch(menu, menus)) {
-            return false;
-        }
-    }
-    return true;
-    }
 
-    public static boolean isExistTargetMenuBinarySearch(String targetMenu,String[] menus) {
-        Arrays.sort(menus);
-        int currentMinIndex=0;
-        int currentMaxIndex=menus.length-1;
-        int currentGuessIndex=(currentMinIndex+currentMaxIndex)/2;
-
-        while(currentMinIndex<=currentMaxIndex) {
-            if(menus[currentGuessIndex].equals(targetMenu)) {
-                return true;
+        HashSet<String> menuHashSet=new HashSet<String>(Arrays.asList(menus));
+        for(String menu:orders) {
+            if(!menuHashSet.contains(menu)) {
+                return false;
             }
-            else if(menus[currentGuessIndex].compareTo(targetMenu)<0) { // array[currentGuess] < target
-                currentMinIndex=currentGuessIndex+1;
-            } 
-            else {   // array[currentGuess] > target
-                currentMaxIndex=currentGuessIndex-1;
-            }
-            currentGuessIndex=(currentMinIndex+currentMaxIndex)/2;
         }
-        return false;
+        return true;
     }
-
 
     public static void main(String[] args) {
         String[] shopMenus = {"만두", "떡볶이", "오뎅", "사이다", "콜라"};
