@@ -59,8 +59,19 @@ class LinkedListKthFromLast {
     }
 
     public int getKthFromLast(int kTh) {
-        int size=size();
-        return getNode(size-kTh);
+        Node slowNode=this.head;
+        Node fastNode=this.head;
+
+        for(int i=1;i<kTh;i++) {
+            fastNode=fastNode.next;
+        }
+
+        while(fastNode.next!=null) {
+            slowNode=slowNode.next;
+            fastNode=fastNode.next;
+        }
+        
+        return slowNode.value;
     }
 }
 
@@ -93,11 +104,5 @@ public class _07_링크드리스트_끝에서_K번째값_출력 {
         System.out.println(linkedList.getKthFromLast(5));
         System.out.println(linkedList.getKthFromLast(6));
         System.out.println(linkedList.getKthFromLast(7));
-        
-
-
-        
-
-
     }
 }
