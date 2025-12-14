@@ -19,7 +19,7 @@ public class _06_탑 {
 
     public static int[] getReceiverTopOrders(int[] heights) {
         int[] result=new int[heights.length];
-        Loop1: for(int i=0;i<heights.length;i++) {
+        Loop1: for(int i=heights.length-1;i>=0;i--) {
             for(int j=i-1;j>=0;j--) {
                 if(heights[i]<=heights[j]) {
                     result[i]=j+1;
