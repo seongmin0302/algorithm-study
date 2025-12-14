@@ -1,6 +1,7 @@
 package 입문.ch03_정렬_스택과큐_해쉬;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class _06_탑 {
     public static void main(String[] args) {
@@ -19,16 +20,28 @@ public class _06_탑 {
 
     public static int[] getReceiverTopOrders(int[] heights) {
         int[] result=new int[heights.length];
-        for(int i=heights.length-1;i>=0;i--) {
-            for(int j=i-1;j>=0;j--) {
-                if(heights[i]<=heights[j]) {
-                    result[i]=j+1;
+        Stack<Integer> heightsStack=new Stack<Integer>();
+
+        for(int height:heights) {
+            heightsStack.push(height);
+        }
+        
+        while (!heightsStack.isEmpty()) {
+            int nowHeight=heightsStack.pop();
+            int currentIndex=heightsStack.size();
+            
+            for(int i=currentIndex-1;i>=0;i--) {
+                if(heights[i]>=nowHeight) {
+                    result[currentIndex]=i+1;
                     break;
                 }
             }
         }
 
         return result;
+
     }
+
+
     
 }
