@@ -1,4 +1,4 @@
-package 입문.ch03_정렬_스택과큐_해쉬;
+package 입문.ch04_트리와힙_BFS와DFC_DP;
 
 import java.util.ArrayList;
 
