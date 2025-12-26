@@ -2,7 +2,7 @@ package 입문.ch04_트리와힙_BFS와DFC_DP;
 
 import java.util.ArrayList;
 
-public class _14_맥스힙 {
+public class _01_맥스힙 {
     public static void main(String[] args) {
         System.out.println("맥스 힙에 원소 추가 test: ");
         MaxHeap maxHeap = new MaxHeap();
