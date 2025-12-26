@@ -25,6 +25,7 @@ public class _02_DFS_재귀이용 {
 
     public static void dfsRecursion(Map<Integer, List<Integer>> adjacentGraph, int curNode, List<Integer> visitedArray) {
         visitedArray.add(curNode);
+        System.out.println("curNode:"+curNode+", adjacentGraph.get(curNode): "+adjacentGraph.get(curNode));
 
         for (int adjacentNode : adjacentGraph.get(curNode)) {
             if (!visitedArray.contains(adjacentNode)) { // 방문하지 않았다면
