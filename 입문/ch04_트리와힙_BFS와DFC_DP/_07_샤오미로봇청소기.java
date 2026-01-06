@@ -5,34 +5,34 @@ import java.util.Queue;
 class _07_샤오미로봇청소기 {
 
     // test1: 정답은 57 가 출력되어야 합니다!
-    private static int currentR = 7;
-    private static int currentC = 4;
-    private static int currentD = 0;
-    private static int[][] currentRoomMap = {
-        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-        {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
-        {1, 0, 0, 1, 1, 0, 0, 0, 0, 1},
-        {1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
-        {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 0, 0, 0, 0, 0, 0, 1, 0, 1},
-        {1, 0, 0, 0, 0, 0, 1, 1, 0, 1},
-        {1, 0, 0, 0, 0, 0, 1, 1, 0, 1},
-        {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
-    };
-
-    // test2: 정답은 11 가 출력되어야 합니다!
-    // private static int currentR = 3;
-    // private static int currentC = 3;
+    // private static int currentR = 7;
+    // private static int currentC = 4;
     // private static int currentD = 0;
     // private static int[][] currentRoomMap = {
-    //     {1, 1, 1, 1, 1, 1},
-    //     {1, 0, 0, 0, 0, 1},
-    //     {1, 0, 1, 0, 0, 1},
-    //     {1, 0, 0, 0, 0, 1},
-    //     {1, 1, 1, 1, 1, 1}
+    //     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    //     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    //     {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
+    //     {1, 0, 0, 1, 1, 0, 0, 0, 0, 1},
+    //     {1, 0, 1, 1, 0, 0, 0, 0, 0, 1},
+    //     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    //     {1, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+    //     {1, 0, 0, 0, 0, 0, 1, 1, 0, 1},
+    //     {1, 0, 0, 0, 0, 0, 1, 1, 0, 1},
+    //     {1, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    //     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     // };
+
+    // test2: 정답은 11 가 출력되어야 합니다!
+    private static int currentR = 3;
+    private static int currentC = 3;
+    private static int currentD = 0;
+    private static int[][] currentRoomMap = {
+        {1, 1, 1, 1, 1, 1},
+        {1, 0, 0, 0, 0, 1},
+        {1, 0, 1, 0, 0, 1},
+        {1, 0, 0, 0, 0, 1},
+        {1, 1, 1, 1, 1, 1}
+    };
     
     // 북 동 남 서
     private static int[] dr = {-1, 0, 1, 0};
@@ -102,6 +102,6 @@ class _07_샤오미로봇청소기 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getCountOfDepartmentsCleanedByRobotVacuum(currentR, currentC, currentD, currentRoomMap));
+        System.out.println("정답: " + getCountOfDepartmentsCleanedByRobotVacuum(currentR, currentC, currentD, currentRoomMap));
     }
 }
